@@ -6,5 +6,6 @@ target 'DemoCICD' do
   use_frameworks!
 
   # Pods for DemoCICD
+  pod "SVProgressHUD"
 
 end
