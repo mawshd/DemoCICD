@@ -1,0 +1,22 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :demo_lane do
+	build_app(
+		workspace: "DemoCICD.xcworkspace",
+		export_method: "development",
+		include_bitcode: false,
+		clean: true,
+		export_options: {
+			uploadBitcode: false,
+      			uploadSymbols: true, 
+      			compileBitcode: false
+			
+		},
+		output_directory: "~/Desktop/Builds/stage/"
+	)
+  	firebase_app_distribution(app: "1:923075399299:ios:a595237296432226a095b6", firebase_cli_token: "1//03j3kWr8k8k1zCgYIARAAGAMSNwF-L9IrwMAtpAgRwZ3Yio4_UlUFBHOzS3MvuJv9opTEIhwF2tqznLG_EUmrgw7tfcK-mKsPKfA", release_notes: "", groups: "qa", debug: true)
+  end
+
+end

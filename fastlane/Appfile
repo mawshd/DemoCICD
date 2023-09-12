@@ -1,0 +1,2 @@
+app_identifier("com.system.DemoCICD") # The bundle identifier of your app
+apple_id("mawshd@gmail.com") # Your Apple Developer Portal username
