@@ -16,3 +16,5 @@ jobs:
       shell: bash
     - name: execute fastlane
       run: bundle exec fastlane demo_lane
+      env: 
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
